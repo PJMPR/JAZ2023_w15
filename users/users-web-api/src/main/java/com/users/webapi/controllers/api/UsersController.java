@@ -1,4 +1,4 @@
-package com.users.webapi.controllers;
+package com.users.webapi.controllers.api;
 
 import com.users.usersdata.model.Address;
 import com.users.usersdata.model.User;

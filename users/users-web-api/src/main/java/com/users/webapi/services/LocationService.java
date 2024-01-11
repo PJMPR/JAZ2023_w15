@@ -22,7 +22,7 @@ public class LocationService {
                 .map(x->new LocationDto(x.getId(), x.getName(), x.getType()))
                 .toList();
     }
-    //@Cacheable(value = "locationCache", key = "#type")
+    @Cacheable(value = "locationCache", key = "#type")
     public List<LocationDto> getByType(String type){
         return db.getLocations()
                 .findAllByType(type)

@@ -23,11 +23,11 @@ public class UsersCacheConfiguration {
      * Możesz użyć domyślnego CacheManagera dostarczonego przez Spring Boot lub skonfigurować własnego.
      * @return
      */
-    @Bean
-    public CacheManager cacheManager() {
-        SimpleCacheManager cacheManager = new SimpleCacheManager();
-        cacheManager.setCaches(Arrays.asList(new ConcurrentMapCache("locationCache")));
-        return cacheManager;
-    }
+//    @Bean
+//    public CacheManager cacheManager() {
+//        SimpleCacheManager cacheManager = new SimpleCacheManager();
+//        cacheManager.setCaches(Arrays.asList(new ConcurrentMapCache("locationCache")));
+//        return cacheManager;
+//    }
 
 }

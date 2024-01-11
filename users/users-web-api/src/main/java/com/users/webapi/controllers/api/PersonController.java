@@ -1,4 +1,4 @@
-package com.users.webapi.controllers;
+package com.users.webapi.controllers.api;
 
 import com.users.webapi.contract.PersonDto;
 import com.users.webapi.contract.PictureDto;

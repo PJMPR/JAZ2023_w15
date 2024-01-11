@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PersonRepository extends JpaRepository<Person, Long> {
 
@@ -32,4 +33,7 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
      */
     @Query(value = "SELECT new com.users.usersdata.model.projections.PersonAverageProjection(AVG(p.age)) FROM Person p where p.age>= :age")
     PersonAverageProjection getAgeAverage(@Param("age") int ageFrom);
+
+    @Query(value = "select p FROM Person p where p.user.id= :userId")
+    Optional<Person> findByUserId(@Param("userId") Long userId);
 }
