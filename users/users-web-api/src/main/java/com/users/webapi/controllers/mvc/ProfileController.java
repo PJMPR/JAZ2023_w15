@@ -32,6 +32,12 @@ public class ProfileController {
         return "profile";
     }
 
+    @GetMapping("chat")
+    public String chat(Model model, @AuthenticationPrincipal RandomUserDetails user){
+
+        return "chat";
+    }
+
 //    @GetMapping("profile")
 //    public String getProfile(Model model, HttpServletRequest request){
 //        HttpSession session = request.getSession();
