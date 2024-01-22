@@ -1,4 +1,4 @@
-package com.users.webapi;
+package com.users.webapi.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

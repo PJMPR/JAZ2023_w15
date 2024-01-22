@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = "com.users")
-//@EnableJpaRepositories
 public class UsersWebApiApplication {
 
     public static void main(String[] args) {

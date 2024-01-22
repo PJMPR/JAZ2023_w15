@@ -3,26 +3,26 @@ const stompClient = new StompJs.Client({
 })
 stompClient.activate();
 
-// stompClient.onConnect = (frame) => {
-//     console.log('Connected: ' + frame);
-//     stompClient.subscribe('/queue/messages', (message) => {
-//         handleIncommingMessage(message);
-//     });
-// };
+stompClient.onConnect = (frame) => {
+    console.log('Connected: ' + frame);
+    stompClient.subscribe('/queue/messages', (message) => {
+        handleIncommingMessage(message);
+    });
+};
 
-// function disconnect() {
-//     stompClient.deactivate();
-//     console.log("Disconnected");
-// }
+function disconnect() {
+    stompClient.deactivate();
+    console.log("Disconnected");
+}
 
 
 
-// function sendMessage() {
-//     stompClient.publish({
-//         destination: "/app/chat",
-//         body: JSON.stringify({'message': getMessage()})
-//     });
-// }
+function sendMessage() {
+    stompClient.publish({
+        destination: "/app/chat",
+        body: JSON.stringify({'message': getMessage()})
+    });
+}
 
 
 function handleIncommingMessage(message) {

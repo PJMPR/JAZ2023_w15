@@ -1,4 +1,4 @@
-package com.users.webapi;
+package com.users.webapi.configurations;
 
 import com.users.webapi.contract.LocationDto;
 import org.springframework.cache.CacheManager;

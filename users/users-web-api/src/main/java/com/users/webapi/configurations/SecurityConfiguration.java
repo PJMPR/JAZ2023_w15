@@ -1,4 +1,4 @@
-package com.users.webapi;
+package com.users.webapi.configurations;
 
 import com.users.webapi.services.security.RandomUserDetailsService;
 import lombok.RequiredArgsConstructor;
@@ -14,8 +14,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-@Configuration
-@EnableWebSecurity
+//@Configuration
+//@EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfiguration {
 

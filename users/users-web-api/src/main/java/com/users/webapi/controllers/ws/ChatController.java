@@ -19,7 +19,7 @@ public class ChatController {
      * Innymi słowy, kiedy klient (np. przeglądarka internetowa) wysyła wiadomość do endpointu /app/chat
      * (pamiętaj o prefiksie /app skonfigurowanym wcześniej), ta metoda zostanie wywołana.
      */
-    //@MessageMapping("/chat")
+    @MessageMapping("/chat")
 
     /**
      * @SendTo("/queue/messages"): Po przetworzeniu wiadomości przez metodę receiveMessage,
@@ -29,7 +29,7 @@ public class ChatController {
      * (lub określonej grupy użytkowników),
      * którzy nasłuchują na tej destynacji.
      */
-    //@SendTo("/queue/messages")
+    @SendTo("/queue/messages")
     public ChatMessage receiveMessage(Principal principal, ChatMessage message) {
         message.setMessage(principal.getName()+": "+message.getMessage());
         return message;

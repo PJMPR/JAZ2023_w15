@@ -24,13 +24,13 @@ public class ProfileController {
      * inne sposoby: Authentication, Principal, SecurityContextHolder
      * --> mogą zawierać więcej informacji o użytkowniku, takich jak role i uprawnienia.
      */
-    @GetMapping("profile")
-    public String getProfile(Model model, @AuthenticationPrincipal RandomUserDetails user){
-
-        var person = db.getPeople().findByUserId(user.getId()).orElse(new Person());
-        model.addAttribute("person", person);
-        return "profile";
-    }
+//    @GetMapping("profile")
+//    public String getProfile(Model model, @AuthenticationPrincipal RandomUserDetails user){
+//
+//        var person = db.getPeople().findByUserId(user.getId()).orElse(new Person());
+//        model.addAttribute("person", person);
+//        return "profile";
+//    }
 
     @GetMapping("chat")
     public String chat(Model model, @AuthenticationPrincipal RandomUserDetails user){
